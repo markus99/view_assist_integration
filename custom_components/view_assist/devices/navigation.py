@@ -117,6 +117,9 @@ class NavigationManager:
             self.config.runtime_data.default.mode,
         )
 
+        # Store current view in runtime data
+        self.config.runtime_data.current_view = path
+
         # Send navigation event to VA JS Helper
         async_dispatcher_send(
             self.hass,

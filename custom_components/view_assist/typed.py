@@ -192,6 +192,9 @@ class DeviceRuntimeData:
         self.dashboard: DashboardConfig = DashboardConfig()
         self.default: DefaultConfig = DefaultConfig()
 
+        # Track current view/path
+        self.current_view: str | None = None
+
         # Extra data for holding key/value pairs passed in by set_state service call
         self.extra_data: dict[str, Any] = {}
 

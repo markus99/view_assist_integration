@@ -109,6 +109,7 @@ class ViewAssistSensor(SensorEntity):
                 VAEventType.TIMER_UPDATE,
                 VAEventType.BROWSER_REGISTERED,
                 VAEventType.CONFIG_UPDATE,
+                VAEventType.NAVIGATION,
             ]:
                 self.schedule_update_ha_state(True)
 
@@ -213,4 +214,5 @@ class ViewAssistSensor(SensorEntity):
             "mode": d.default.mode,
             "view_timeout": d.default.view_timeout,
             "weather_entity": d.default.weather_entity,
+            "current_view": d.current_view,
         }
